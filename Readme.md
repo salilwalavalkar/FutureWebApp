@@ -9,7 +9,7 @@ HSQL Setup and Queries:
 /docs/HSQL_Setup.txt
 
 URL Syntax: 
-http://<server>:<port>/FutureWebApp
+http://server:port/FutureWebApp
 
 URL Example:
 http://localhost:8080/FutureWebApp
