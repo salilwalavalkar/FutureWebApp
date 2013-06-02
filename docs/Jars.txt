@@ -1,0 +1,83 @@
+# Original Jars:
+org.springframework.beans-3.1.2.RELEASE.jar
+org.springframework.context-3.1.2.RELEASE.jar
+org.springframework.context.support-3.1.2.RELEASE.jar
+org.springframework.core-3.1.2.RELEASE.jar
+org.springframework.transaction-3.1.2.RELEASE.jar
+org.springframework.web-3.1.2.RELEASE.jar
+org.springframework.web.servlet-3.1.2.RELEASE.jar
+
+# ASM Jar:
+Error: org/springframework/asm/ClassVisitor
+Jar: org.springframework.asm-3.1.2.RELEASE.jar
+
+#Expression Jar:
+Error: org.springframework.expression.PropertyAccessor
+Jar: org.springframework.expression-3.1.2.RELEASE.jar
+
+#Commons Logging jar. Required by Spring internally:
+Error: org.apache.commons.logging.LogFactory not found
+Jar: commons-logging-1.1.jar
+
+#JSTL jar. Required for JSP.
+Composed of one JAR file jstl-1.2.jar and has same tagtlib URI as 1.1. Came along with Servlet 2.5 / JSP 2.0 but works at Servlet 2.4 / JSP 2.0 as well
+Jar: jstl-1.2.jar
+
+#Log4J And SLF4J
+jcl-over-slf4j-1.5.8.jar (Bridge Jakarta Commons Logging (Used by Spring) to slf4j)
+slf4j-api-1.5.8.jar	(Used by Hibernate)
+slf4j-log4j12-1.5.8.jar (For slf4j to use log4j as a backend)
+log4j-1.2.14.jar (Used for actual logging. Logging properties are configured for log4j)
+
+#Hibernate Jar
+hibernate3.jar
+
+# DBCP
+Error: org.apache.commons.dbcp.BasicDataSource
+commons-dbcp-1.4.jar
+
+#Pool
+Error: org.apache.commons.pool.impl.GenericObjectPool
+commons-pool-1.6.jar
+
+# ORM
+Error: org.springframework.orm.hibernate3.LocalSessionFactoryBean
+org.springframework.orm-3.1.2.RELEASE.jar
+
+# JTA
+Error: java.lang.NoClassDefFoundError: javax/transaction/TransactionManager
+jta-1.1.jar (provided with Hibernate)
+
+# JDBC
+Error: java.lang.ClassNotFoundException: org.springframework.jdbc.support.lob.LobHandler
+org.springframework.jdbc-3.1.2.RELEASE
+
+#DOM
+java.lang.NoClassDefFoundError: org/dom4j/DocumentException
+dom4j-1.6.1
+
+# All Hiberate Package Jars
+commons-collections-3.1.jar
+dom4j-1.6.1.jar
+hibernate-jpa-2.0-api-1.0.0.Final.jar
+hibernate3.jar
+jta-1.1.jar
+
+#Required for annotation evo
+antlr-2.7.6.jar
+javassist-3.12.0.GA.jar
+
+#Added transaction in xml
+java.lang.NoClassDefFoundError: org/springframework/aop/config/AopNamespaceUtils
+org/aopalliance/intercept/MethodInterceptor
+So added:
+org.springframework.aop-3.1.2.RELEASE.jar
+
+#Also added:
+AOP Alliance (Java/J2EE AOP standard)
+We believe that Aspect-Oriented Programming (AOP) offers a better solution to many problems than do existing technologies such as EJB. The AOP Alliance aims to ensure interoperability between Java/J2EE AOP implementations to build a larger AOP community.
+aopalliance is no longer bundled in Spring..it was completely removed from spring-aop.jar
+
+#HSQLDB (HyperSQL DataBase) is the leading SQL relational database engine written in Java. It offers a small, fast multithreaded 
+and transactional database engine with in-memory and disk-based tables. 
+hsqldb.jar
