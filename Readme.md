@@ -1,5 +1,7 @@
 Build Date: Jan 2012
 
+** Note: This project is no longer updated. I have converted this project to Maven 2 based layered project which is available under the name "futureapp-parent" on my github profile. This new project will be further updated. **
+
 Details: This sample project shows the basic flow of a Spring + Hiberate project. It has all CRUD operations defined with transactions. 
 Please note HSQL db is used for this example. 
 
